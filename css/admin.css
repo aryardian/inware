@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  position: fixed;
+  left: -240px;
+  width: 240px;
+  height: 100%;
+   background:rgba(0, 0, 0, 0.1);
+   transition: all .5s ease;
+}
+.container navbar{
+  font-size: 15px;
+  color: white;
+  line-height: 20px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  border-bottom: 1px solid black;
+}
+.container a{
+  display: block;
+  height: 20px;
+  width: 100%;
+  color: white;
+  line-height: 50px;
+  padding-left: 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255, 255, 255, .1);
+  border-left: 3px solid transparent;
+  transition: all .5s ease;
+}
+.container a i{
+  font-size: 23px;
+  margin-right: 16px;
+}
+.container a{
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+#check{
+  display: none;
+}
+label #btn, label #cancel{
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  cursor: pointer;
+  font-size: 27px;
+  text-align: center;
+  line-height: 45px;
+  color: white;
+  margin: 5px 20px;
+  border-bottom: 2px solid white;
+  border-radius: 5px;
+  background: black;
+  transition: all .5s ease;
+}
+label #cancel{
+  opacity: 0;
+  visibility: hidden;
+}
+#check:checked~ .container{
+  left: 0;
+}
+#check:checked~ label #btn{
+  margin-left: 245px;
+  opacity: 0;
+  visibility: hidden;
+}
+#check:checked~ label #cancel {
+  margin-left: 245px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-items {
+  height: 100%;
+  width: 100%;
+  list-style: none;
+  transition: all 0.4s ease;
+}
+.submenu-active .menu-items {
+  transform: translateX(-56%);
+}
+.menu-title {
+  color: #fff;
+  font-size: 20px;
+  padding: 15px 20px;
+}
+.item a,
+.submenu-item {
+  padding: 16px;
+  display: inline-block;
+  width: 100%;
+  border-radius: 12px;
+}
+.item i {
+  font-size: 18px;
+}
+.item a:hover,
+.submenu-item:hover,
+.submenu .menu-title:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.submenu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+}
+.submenu {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: calc(-100% - 26px);
+  height: calc(100% + 100vh);
+  background: #11101d;
+  display: none;
+}
+.show-submenu ~ .submenu {
+  display: block;
+}
+.submenu .menu-title {
+  border-radius: 12px;
+  cursor: pointer;
+}
+span{
+  border-radius:12px;
+  cursor:pointer;
+}
+.submenu .menu-title i {
+  margin-right: 10px;
+}
+
+#logout {
+  color: black;
+  position: absolute;
+  bottom: 80px;
+  left: 50px;
+  width: 60%;
+  text-align: center;
+  padding: 10px;
+  background-color: yellow;
+  font-size: 16px;
+}
+
+
+
+.main {
+  background: url("../img/background.jpeg") no-repeat;
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.text {
+  margin-top: 550px;
+  margin-right: 65px;
+  color: white;
+  text-align: center;
+}
+
+.text h3 {
+  font-size: 80px;
+}
+
+.text p {
+  font-size: 40px;
+  border-bottom: 2px solid white;
+}
+
+
+
